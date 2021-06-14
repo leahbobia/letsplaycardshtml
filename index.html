@@ -21,19 +21,53 @@
                         <label for="username">Name</label>
                         <input type="text" id="username" required> 
                         <label for="cards">Expansions</label>
-                        <button class="dropdown"></button>
+                        <button class="dropdown">Select All <img class="arrow" src="../images/Polygon1.svg"></button>
                         <!-- <select onClick multiple>
 
                             <option>Select All</option>
                             <option>Base Game</option>
-                            <option>Expansion Pack 2021</option>
-                            <option>Pandemic Expansion Pack</option>
-                            <option>The Before Times Expansion</option>
-                            <option>Expansion Pack 2017</option>
-                            <option>Rooster Teeth Expansion</option>
-                            <option>Shrek Expansion Pack</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                            <option>Option 5</option>
+                            <option>Option 6</option>
                         </select> -->
-                        <label for="username">Password</label>
+                        <div class="container">
+                            <li>
+                                <input id="selectall" type="checkbox">
+                                <label for="selectall">Select All</label>
+                            </li>
+                            <li>
+                                <input id="basegame" type="checkbox" checked>
+                                <label for="basegame">Base Game</label>
+                            </li>
+                            <li>
+                                <input id="expansion1" type="checkbox">
+                                <label for="expansion1">Expansion 1</label>
+                            </li>
+                            <li>
+                                <input id="expansion2" type="checkbox">
+                                <label for="expansion2">Expansion 2</label>
+                            </li>
+                            <li>
+                                <input id="expansion3" type="checkbox">
+                                <label for="expansion3">Expansion 3</label>
+                            </li>
+                            <li>
+                                <input id="expansion4" type="checkbox">
+                                <label for="expansion4">Expansion 4</label>
+                            </li>
+                            <li>
+                                <input id="expansion5" type="checkbox">
+                                <label for="expansion5">Expansion 5</label>
+                            </li>
+                            <li>
+                                <input id="expansion6" type="checkbox">
+                                <label for="expansion6">Expansion 6 With Really Long Name</label>
+                            </li>
+                        </div>
+                        <label for="password">Password</label>
                         <input type="password">
                     <button class="creategame" type="submit">Create Game</button>
                 </form>

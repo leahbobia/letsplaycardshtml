@@ -8,7 +8,6 @@ body {
     width: 100vw;
     background: rgb(253,54,126);
     background: linear-gradient(180deg, rgba(253,54,126,1) 0%, rgba(78,17,132,1) 49%, rgba(15,21,86,1) 100%);
-
 }
 
 header {
@@ -35,7 +34,7 @@ header h2 {
     min-width: 270px;
     height: 33rem;
     border-radius: 18px;
-    position: relative;
+
 }
 
 .content {
@@ -60,7 +59,6 @@ label {
     margin-bottom: .5rem;
 }
 
-
 input {
     height: 2.813rem;
     box-sizing: border-box;
@@ -71,6 +69,7 @@ input {
     font-size: 1rem;
 }
 
+/*
 select {
     font-size: 1rem;
     height:2.813rem;
@@ -80,49 +79,104 @@ select {
     border-width: 1px;
 }
 
+option {
+    padding: .75rem 1rem;
+    font-weight: lighter;
+}
+
+*/
+
 .dropdown {
     font-size: 1rem;
     height:2.813rem;
     width: 100%;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
     border-width: 1px;
+    padding: .75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-  option {
-      padding: .75rem 1rem;
-      font-weight: lighter;
-  }
+.arrow {
+    transform: rotate(180deg);
+}
 
-  .creategame {
-      display: block;
-      cursor: pointer;
-      font-size: 1rem;
-      background: #FD367E;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 1rem 2em;
-      margin: 2.5rem auto;
-      text-align: center;
-  }
+.container {
+    position: absolute;
+    z-index: 10;
+    top: 17.4rem;
+    box-sizing: border-box;
+    width: 80%;
+    height: 13rem;
+    background: white;
+    border: 1px black solid;
+    border-radius: 0px 0px 5px 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-weight: 300;
+    font-size: 1rem;
+}
 
-  .creategame:hover {
-      background: #EF1765;
-  }
+li {
+    list-style-type: none;
+    padding: .5rem .75rem;
+    cursor: pointer;
+}
 
-  @media only screen and (max-width: 350px) {
-      html {
-          font-size: 14px;
-      }
+li label {
+    position: relative;
+    vertical-align: text-bottom;
+    bottom: .2rem;
+    font-size: 1rem;
+    display: inline;
+    padding-left: .1rem;
+    cursor: pointer;
+}
 
-      .card {
-          width: 95vw;
-      }
-  }
+li:hover {
+    background: #E1E1F1;
+}
 
-  @media only screen and (min-width: 600px) {
-      html {
-          font-size: 18px;
-      }
+li:checked {
+    background: #E1E1F1;
+}
+
+input[type=checkbox] {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+}
+
+.creategame {
+    display: block;
+    cursor: pointer;
+    font-size: 1rem;
+    background: #FD367E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2em;
+    margin: 2.5rem auto;
+    text-align: center;
+}
+
+.creategame:hover {
+    background: #EF1765;
+}
+
+@media only screen and (max-width: 350px) {
+    html {
+        font-size: 14px;
+    }
+
+    .card {
+        width: 95vw;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 18px;
+    }
 }
