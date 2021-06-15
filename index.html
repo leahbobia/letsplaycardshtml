@@ -21,19 +21,8 @@
                         <label for="username">Name</label>
                         <input type="text" id="username" required> 
                         <label for="cards">Expansions</label>
-                        <button class="dropdown">Select All <img class="arrow" src="../images/Polygon1.svg"></button>
-                        <!-- <select onClick multiple>
-
-                            <option>Select All</option>
-                            <option>Base Game</option>
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                            <option>Option 4</option>
-                            <option>Option 5</option>
-                            <option>Option 6</option>
-                        </select> -->
-                        <div class="container">
+                        <button type="menu" class="listtrigger">Select Cards<img class="arrow" src="../images/Polygon1.svg"></button>
+                        <div class="cardlist">
                             <li>
                                 <input id="selectall" type="checkbox">
                                 <label for="selectall">Select All</label>
@@ -64,7 +53,7 @@
                             </li>
                             <li>
                                 <input id="expansion6" type="checkbox">
-                                <label for="expansion6">Expansion 6 With Really Long Name</label>
+                                <label for="expansion6">A Bigger Blacker Box</label>
                             </li>
                         </div>
                         <label for="password">Password</label>
