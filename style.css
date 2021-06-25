@@ -19,9 +19,9 @@ header {
 }
 
 header h1 {
+    font-family: "Permanent Marker";
     margin-bottom: -.5rem;
-    font-size: 2.125rem;
-    font-weight: bold;
+    font-size: 2.5rem;
 }
 
 header h2 {
@@ -45,6 +45,7 @@ header h2 {
 }
 
 .content h1 {
+    font-family: "Permanent Marker";
     font-weight: 500;
     font-size: 1.5rem;
     text-align: center;
@@ -70,6 +71,10 @@ input {
     width: 100%;
     padding: 0rem .75rem;
     font-size: 1rem;
+}
+
+input:focus {
+    background: #FFE605;
 }
 
 .listtrigger {
@@ -105,7 +110,7 @@ input {
     overflow-x: hidden;
     font-weight: 300;
     font-size: 1rem;
-    /*display: none; /* comment out this line to display the list*/
+    display: none; /* comment out this line to display the list*/
 }
 
 li {
@@ -146,9 +151,11 @@ input[type=checkbox] {
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 1rem 2em;
-    margin: 2.5rem auto;
+    width: 175px;
+    height: 60px;
+    /*padding: 1rem 2em;*/
     text-align: center;
+    margin: 2rem auto;
 }
 
 .creategame:hover {

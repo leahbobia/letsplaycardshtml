@@ -1,5 +1,6 @@
 html {
     font-family: 'Poppins', sans-serif;
+    color: #121559;
 }
 
 body {
@@ -18,8 +19,8 @@ header {
 
 header h1 {
     margin-bottom: -.5rem;
-    font-size: 2.125rem;
-    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: "Permanent Marker";
 }
 
 header h2 {
@@ -34,15 +35,15 @@ header h2 {
     min-width: 270px;
     height: 33rem;
     border-radius: 18px;
-
 }
 
 .content {
     padding: 1.25rem 2rem;
-    position:relative;
+    position: relative;
 }
 
 .content h1 {
+    font-family: "Permanent Marker";
     font-weight: 500;
     font-size: 1.5rem;
     text-align: center;
@@ -50,19 +51,39 @@ header h2 {
 
 label {
     display: block;
-    width: 100%;
+    text-align: center;
     margin-top: 1.5rem;
     margin-bottom: .5rem;
 }
 
-input {
+input[type=text]{
+    background: #FFF172;
     height: 2.813rem;
     box-sizing: border-box;
-    border-width: 1px;
+    border: none;
     border-radius: 5px;
     width: 100%;
     padding: 0rem .75rem;
-    font-size: 1rem;
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+.userlist {
+    list-style-type: none;
+    width: 100%;
+    margin: 2rem 0rem;
+    font-weight: 300;
+    height: 10.3rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+li {
+    padding: .4rem 0rem;
+}
+
+li:hover {
+    background: #FFF172
 }
 
 .startgame {
@@ -73,7 +94,9 @@ input {
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 1rem 2em;
+        width: 175px;
+    height: 60px;
+    /*padding: 1rem 2em;*/
     margin: 2.5rem auto;
     text-align: center;
 }
