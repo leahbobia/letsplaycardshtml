@@ -1,13 +1,20 @@
+:root {
+    --main: #121559;
+    --highlight: #FFF172;
+    --cta: #FD367E;
+}
+
 html {
     font-family: 'Poppins', sans-serif;
+    color: var(--main);
 }
 
 body {
     margin: 0;
     height: 100vh;
     width: 100vw;
-    background: rgb(253,54,126);
-    background: linear-gradient(180deg, rgba(253,54,126,1) 0%, rgba(78,17,132,1) 49%, rgba(15,21,86,1) 100%);
+    background: rgb(78,17,132);
+background: linear-gradient(180deg, rgba(78,17,132,1) 0%, rgba(52,17,132,1) 100%, rgba(17,21,88,1) 100%);
 }
 
 
@@ -37,7 +44,6 @@ header h2 {
     min-width: 270px;
     height: 33rem;
     border-radius: 18px;
-    position: relative;
 }
 
 .content {
@@ -63,45 +69,60 @@ label {
     margin-bottom: .5rem;
 }
 
+label.invite{
+    text-align: center;
+}
+
 input {
     height: 2.813rem;
     box-sizing: border-box;
-    border-width: 1px;
+    border: 2px solid var(--main);
     border-radius: 5px;
+    color: var(--main);
     width: 100%;
     padding: 0rem .75rem;
+    text-decoration: none;
     font-size: 1rem;
 }
 
 input:focus {
-    background: #FFE605;
+    background: var(--highlight);
 }
 
+input:hover {
+    background: var(--highlight);
+}
+
+/*Game Options specific styling*/
 .listtrigger {
     background: white;
+    color: var(--main);
     font-size: 1rem;
     height:2.813rem;
     width: 100%;
     box-sizing: border-box;
-    border-radius: 5px 5px 5px 5px;
-    border-width: 1px;
+    border: 2px solid var(--main);
+    border-radius: 5px;
     padding: 0rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.listtrigger:hover {
+    background: var(--highlight);
+    cursor: pointer;
+}
+
 .arrow {
+    /*rotate 180 degrees when clicked*/
     transform: rotate(0deg);
 }
 
-/*styling for dropdown card selection list*/
 .cardlist {
-    position: absolute;
-    z-index: 10;
-    top: 17.4rem;
+    margin-top: .1rem;
     box-sizing: border-box;
-    width: 80%;
+    width: 100%;
     height: 13rem;
     background: white;
     border: 1px black solid;
@@ -113,55 +134,89 @@ input:focus {
     display: none; /* comment out this line to display the list*/
 }
 
-li {
+.cardlist li {
     list-style-type: none;
     padding: .5rem .75rem;
     cursor: pointer;
 }
 
-li label {
+.cardlist li label {
     position: relative;
     vertical-align: text-bottom;
-    bottom: .2rem;
+    bottom: .1rem;
     font-size: 1rem;
     display: inline;
     padding-left: .1rem;
     cursor: pointer;
 }
 
-li:hover {
-    background: #E1E1F1;
+.cardlist li:hover {
+    background: ghostwhite;
 }
 
-li:checked {
-    background: #E1E1F1;
+.cardlist li:checked {
+    background: ghostwhite;
 }
 
 input[type=checkbox] {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1rem;
+    height: 1rem;
     cursor: pointer;
 }
 
-.creategame {
+.cta {
     display: block;
     cursor: pointer;
     font-size: 1rem;
-    background: #FD367E;
+    background: var(--cta);
     color: white;
     border: none;
     border-radius: 5px;
     width: 175px;
     height: 60px;
-    /*padding: 1rem 2em;*/
     text-align: center;
     margin: 2rem auto;
 }
 
-.creategame:hover {
+.cta:hover {
     background: #EF1765;
 }
 
+/*Lobby specific styling only*/
+.userlist {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    border-radius: 5px;
+    margin: 2rem 0rem;
+    font-weight: 300;
+    height: 10.75rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position:initial;
+}
+
+.userlist::-webkit-scrollbar {
+    width: .5em;
+    background: transparent;
+}
+
+.userlist::-webkit-scrollbar-thumb {
+    background: #E1E1F1;
+    border-radius: 5px;
+}
+
+.userlist li {
+    padding: .25rem 1rem;
+}
+
+.userlist li:hover {
+    background: #F9F9FC;
+    cursor: pointer;
+}
+
+
+/*responsiveness*/
 @media only screen and (max-width: 350px) {
     html {
         font-size: 14px;
